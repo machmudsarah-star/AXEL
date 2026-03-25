@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support Axel at the International Cybersecurity Olympiad 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050816;
+      --accent: #38bdf8;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --text-strong: #f9fafb;
+      --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.9);
+      --radius-pill: 999px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Inter", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-bottom: 40px;
+    }
+
+    .page-shell {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.7));
+    }
+
+    .hero-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 12px 30px rgba(0,0,0,0.85);
+      margin-bottom: 10px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      max-width: 640px;
+      color: #e5e7eb;
+      text-shadow: 0 10px 28px rgba(0,0,0,0.9);
+    }
+
+    .hero-button-row {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 26px;
+      border-radius: var(--radius-pill);
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0b1220;
+      background: linear-gradient(to right, #facc15, #f97316);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.8);
+      text-decoration: none;
+    }
+
+    .btn-primary span.sub {
+      font-size: 12px;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    .hero-target {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #e5e7eb;
+      text-shadow: 0 8px 22px rgba(0,0,0,0.9);
+    }
+
+    header.brand-row {
+      padding: 20px 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-main {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15,23,42,0.9);
+      border-radius: var(--radius-pill);
+      padding: 4px 12px;
+      border: 1px solid rgba(148,163,184,0.3);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .brand-tag span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.25);
+    }
+
+    .brand-title {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .brand-title span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .brand-logo {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      gap: 2px;
+    }
+
+    .brand-logo strong {
+      font-size: 15px;
+      color: var(--text-main);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-logo span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* DONATION BAR */
+    .donation-bar {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.16), rgba(15,23,42,0.98));
+      border-radius: 26px;
+      border: 1px solid rgba(56,189,248,0.6);
+      padding: 20px 20px 18px;
+      margin: 16px 16px 22px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .donation-bar-text {
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 18px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .donation-bar-text p {
+      color: #e0f2fe;
+    }
+
+    .donation-bar-text strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .donation-bar-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .progress-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+      color: #dbeafe;
+    }
+
+    .progress-label-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .progress-bar-wrap {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(56,189,248,0.4);
+      overflow: hidden;
+    }
+
+    .progress-bar-inner {
+      width: 28%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(to right, #0ea5e9, #22c55e);
+      box-shadow: 0 0 20px rgba(56,189,248,0.7);
+    }
+
+    .flags-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-top: 4px;
+    }
+
+    /* MAIN CARD */
+    .card {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.08) 0, #020617 40%, #000 100%);
+      border-radius: 32px;
+      padding: 26px 24px;
+      margin: 0 16px;
+      border: 1px solid rgba(148,163,184,0.35);
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -120px;
+      background:
+        radial-gradient(circle at 0 0, rgba(56,189,248,0.12), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(129,140,248,0.08), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+      display: contents;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .column-left {
+      padding-right: 8px;
+      border-right: 1px dashed rgba(148,163,184,0.35);
+    }
+
+    .column-right {
+      padding-left: 8px;
+    }
+
+    .heading-kicker {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: 26px;
+      line-height: 1.25;
+      color: var(--text-strong);
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .subtitle strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .pill-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pill {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.9);
+      color: var(--text-muted);
+      white-space: normal;
+      line-height: 1.4;
+    }
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(56,189,248,0.25);
+      flex-shrink: 0;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(15,23,42,0.8);
+      border: 1px solid rgba(148,163,184,0.3);
+    }
+
+    .meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .meta-value {
+      color: #e5e7eb;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .bio-block {
+      background: rgba(15,23,42,0.92);
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.5);
+      padding: 14px 15px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .bio-title {
+      font-size: 15px;
+      color: var(--text-main);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .bio-title span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+    }
+
+    .bio-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .bio-text strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .list-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .chip {
+      font-size: 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.6);
+      padding: 4px 10px;
+      color: var(--text-muted);
+      background: rgba(15,23,42,0.95);
+    }
+
+    .chip strong {
+      color: var(--text-main);
+    }
+
+    /* ICO SECTION */
+    .ico-section {
+      margin: 22px 16px 0;
+      background: radial-gradient(circle at top right, rgba(56,189,248,0.18), rgba(15,23,42,0.98));
+      border-radius: 24px;
+      border: 1px solid rgba(56,189,248,0.5);
+      padding: 16px 18px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+    }
+
+    .ico-logo-wrap {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .ico-logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .ico-text {
+      font-size: 14px;
+      color: #e0f2fe;
+      line-height: 1.6;
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr;
+      gap: 16px;
+    }
+
+    .ico-text strong {
+      color: #ffffff;
+    }
+
+    .ico-link {
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .ico-link a {
+      color: #bfdbfe;
+      text-decoration: underline;
+    }
+
+    /* GALLERY SECTION */
+    .gallery-section {
+      margin: 26px 16px 0;
+      background: rgba(15,23,42,0.96);
+      border-radius: 24px;
+      border: 1px solid rgba(148,163,184,0.6);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .gallery-title {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: #020617;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      min-height: 180px;
+    }
+
+    .footer-note {
+      margin: 18px 16px 0;
+      font-size: 12px;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-note a {
+      color: #9ca3af;
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(156,163,175,0.6);
+    }
+
+    .footer-note a:hover {
+      color: #e5e7eb;
+    }
+
+    @media (max-width: 900px) {
+      .hero-title { font-size: 24px; }
+      .hero-sub { font-size: 14px; }
+
+      header.brand-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand-logo {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .donation-bar-text,
+      .ico-text {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        grid-template-columns: 1fr;
+        padding: 22px 18px;
+        gap: 22px;
+      }
+
+      .column-left {
+        padding-right: 0;
+        padding-bottom: 18px;
+        border-right: none;
+        border-bottom: 1px dashed rgba(148,163,184,0.35);
+      }
+
+      .column-right {
+        padding-left: 0;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <!-- HERO -->
+    <section class="hero">
+      <!-- rename your new banner to hero-axel-ico.jpg -->
+      <img src="hero-axel-ico.jpg" alt="Help Axel get to Sydney for ICO 2026" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-title">Help Axel Get to Sydney for ICO 2026</div>
+        <div class="hero-sub">
+          Fundraising to support Axel’s journey to represent Venezuela at the International Cybersecurity Olympiad in Sydney, Australia. [web:2]
+        </div>
+        <div class="hero-button-row">
+          <a class="btn-primary" href="https://buy.stripe.com/fZubJ2aRd5rugJBbyTgIo00" target="_blank" rel="noopener noreferrer">
+            Donate now
+            <span class="sub">Secure payment with Stripe</span>
+          </a>
+        </div>
+        <div class="hero-target">Fundraising target · Meta: AUD 15,000</div>
+      </div>
+    </section>
+
+    <!-- BRAND HEADER -->
+    <header class="brand-row">
+      <div class="brand-main">
+        <div class="brand-tag">
+          <span class="dot"></span>
+          <span>Community Fundraiser</span>
+        </div>
+        <div class="brand-title">
+          Asociación de Venezolanos en Queensland · <span>Venezuelans in Queensland Association</span>
+        </div>
+      </div>
+      <div class="brand-logo">
+        <strong>ICO 2026 · SYDNEY</strong>
+        <span>International Cybersecurity Olympiad</span>
+      </div>
+    </header>
+
+    <!-- DONATION BAR -->
+    <section class="donation-bar">
+      <div class="donation-bar-text">
+        <p>
+          Nuestra donación apoya directamente el viaje de Axel desde Venezuela hasta Australia.
+          Los fondos ayudarán a cubrir <strong>vuelos internacionales, alojamiento, alimentación, materiales de estudio y transporte local</strong> mientras Axel representa a nuestra comunidad venezolana en la ICO 2026 en Sídney. [web:2][web:11]
+        </p>
+        <p>
+          Our donation directly supports Axel’s journey from Venezuela to Australia.
+          Funds will help cover <strong>international flights, accommodation, meals, learning materials and local transport</strong> while Axel represents our Venezuelan community at ICO 2026 in Sydney. [web:2][web:11]
+        </p>
+      </div>
+      <div class="donation-bar-bottom">
+        <div class="progress-row">
+          <div class="progress-label-row">
+            <span>Recaudación para viaje y estadía · Fundraising towards travel & stay</span>
+            <span>Meta / Target: AUD 15,000</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-inner"></div>
+          </div>
+          <span>Cada aporte cuenta · Every contribution counts — thank you for being part of Axel’s story.</span>
+        </div>
+        <div class="flags-row">
+          Venezuela · Australia · Cybersecurity & education
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN BILINGUAL CARD -->
+    <main class="card">
+      <div class="card-inner">
+        <!-- SPANISH -->
+        <section class="column column-left">
+          <div>
+            <div class="heading-kicker">Apoya a Axel · Español</div>
+            <h1>Un talento venezolano rumbo a Sídney 2026</h1>
+            <p class="subtitle">
+              Con tu apoyo, <strong>Axel Hernández</strong>, joven estudiante venezolano con medallas internacionales en matemáticas, robótica e inteligencia artificial, podrá representar a nuestra comunidad en la <strong>Olimpiada Internacional de Ciberseguridad (ICO) 2026</strong> en Sídney, Australia. [file:1][web:2]
+            </p>
+            <div class="grid-two">
+              <div class="pill-stack">
+                <div class="pill">
+                  <span class="pill-dot"></span>
+                  Olimpiadas de Ciberseguridad · ICO 2026
+                </div>
+                <div class="pill">
+                  <span class="pill-dot"></span>
+                  Comunidad Venezolana en Queensland
+                </div>
+              </div>
+              <div>
+                <div class="meta-row">
+                  <div class="meta-item">
+                    <span class="meta-label">Cuándo</span>
+                    <span class="meta-value">27 junio – 2 julio 2026</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Dónde</span>
+                    <span class="meta-value">Sídney, Australia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section>
+            <div class="section-label">¿Por qué necesitamos tu ayuda?</div>
+            <div class="bio-block">
+              <p class="bio-text">
+                Desde la Asociación de Venezolanos en Queensland estamos recaudando fondos para cubrir <strong>pasaje internacional, hospedaje, alimentación, materiales de estudio y traslados locales</strong> de Axel durante la ICO 2026 en Australia. [web:2][web:11]
+              </p>
+              <p class="bio-text">
+                Cada contribución —pequeña o grande— nos acerca a que un joven venezolano represente, con excelencia, a nuestra comunidad en una competencia mundial de ciberseguridad y abra puertas a becas y oportunidades académicas futuras. [file:1][web:2]
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-label">Trayectoria de Axel</div>
+            <div class="bio-block">
+              <div class="bio-title">
+                Axel Hernández
+                <span>Estudiante · 15 años</span>
+              </div>
+              <p class="bio-text">
+                Estudiante de bachillerato en el Estado Bolívar con <strong>promedio académico perfecto</strong> y una trayectoria excepcional en <strong>olimpiadas de matemáticas, ciencias, informática, robótica e inteligencia artificial</strong>, con medallas de oro, plata y bronce en múltiples países. [file:1]
+              </p>
+              <div class="list-chips">
+                <span class="chip"><strong>Matemáticas:</strong> Copernicus, LIMOC, EMO, ICMO, IGO, Matific y más [file:1]</span>
+                <span class="chip"><strong>IA y Robótica:</strong> Olimpiadas de robótica, IOAI y cursos de IA [file:1]</span>
+                <span class="chip"><strong>Ciberseguridad:</strong> hacking ético, criptografía, informática forense, gestión de riesgos [file:1]</span>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ENGLISH -->
+        <section class="column column-right">
+          <div>
+            <div class="heading-kicker">Support Axel · English</div>
+            <h1>Help a young Venezuelan cyber talent reach Sydney 2026</h1>
+            <p class="subtitle">
+              With your support, <strong>Axel Hernández</strong>, a high‑achieving student from Venezuela with multiple international medals in mathematics, robotics and artificial intelligence, will be able to compete at the <strong>International Cybersecurity Olympiad (ICO) 2026</strong> in Sydney, Australia. [file:1][web:2]
+            </p>
+            <div class="grid-two">
+              <div class="pill-stack">
+                <div class="pill">
+                  <span class="pill-dot"></span>
+                  International Cybersecurity Olympiad · ICO 2026
+                </div>
+                <div class="pill">
+                  <span class="pill-dot"></span>
+                  Venezuelan Community in Queensland
+                </div>
+              </div>
+              <div>
+                <div class="meta-row">
+                  <div class="meta-item">
+                    <span class="meta-label">When</span>
+                    <span class="meta-value">27 June – 2 July 2026</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Where</span>
+                    <span class="meta-value">Sydney, Australia</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section>
+            <div class="section-label">Why your help matters</div>
+            <div class="bio-block">
+              <p class="bio-text">
+                The Venezuelans in Queensland Association is raising funds to cover Axel’s <strong>international airfare, accommodation, meals, learning resources and local transport</strong> while he competes at ICO 2026 in Australia. [web:2][web:11]
+              </p>
+              <p class="bio-text">
+                Every donation —no matter the size— helps a young Venezuelan student represent our community on a global cybersecurity stage and opens doors to scholarships, networks and future academic opportunities. [file:1][web:2]
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-label">Axel’s profile</div>
+            <div class="bio-block">
+              <div class="bio-title">
+                Axel Hernández
+                <span>Student · 15 years old</span>
+              </div>
+              <p class="bio-text">
+                Axel is a high‑school student from Bolívar State with a <strong>perfect academic record</strong> and an outstanding olympiad history in <strong>mathematics, science, informatics, robotics and artificial intelligence</strong>, earning gold, silver and bronze medals across several countries. [file:1]
+              </p>
+              <div class="list-chips">
+                <span class="chip"><strong>Achievements:</strong> International medals since 2022 in Latin America, Europe and Asia [file:1]</span>
+                <span class="chip"><strong>Next goals:</strong> IOAI, AIOI, ICO & IOI 2026 [file:1]</span>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <!-- ICO LOGO AND EVENT INFO -->
+    <section class="ico-section">
+      <div class="ico-logo-wrap">
+        <!-- rename ICO logo to ico-logo-sydney.jpg -->
+        <img src="ico-logo-sydney.jpg" alt="International Cybersecurity Olympiad Sydney logo" />
+      </div>
+      <div class="ico-text">
+        <div>
+          <strong>Conoce más sobre el evento</strong><br>
+          Para más detalles sobre la International Cybersecurity Olympiad (ICO) 2026 en Sídney, visita la página oficial del evento y contacta directamente a los organizadores si tienes preguntas sobre la competencia, el programa o la participación de los equipos. [web:2]
+        </div>
+        <div>
+          <strong>Learn more about the event</strong><br>
+          To learn more about the International Cybersecurity Olympiad (ICO) 2026 in Sydney, please visit the official event website and contact the organisers directly if you have any questions about the competition, schedule or team participation. [web:2]
+        </div>
+      </div>
+      <div class="ico-link">
+        Official website · Sitio oficial: <a href="https://ico2026.au/" target="_blank" rel="noopener noreferrer">ico2026.au</a> [web:2]
+      </div>
+    </section>
+
+    <!-- BIG GALLERY AT THE END -->
+    <section class="gallery-section">
+      <div class="gallery-title">Photo gallery · Galería de fotos</div>
+      <div class="gallery-grid">
+        <!-- make sure these filenames exist in the repo -->
+        <div class="gallery-item">
+          <img src="Profile.jpg" alt="Axel with Venezuelan flag at competition" />
+        </div>
+        <div class="gallery-item">
+          <img src="axel-gallery-1.jpg" alt="Axel receiving an award" />
+        </div>
+        <div class="gallery-item">
+          <img src="axel-gallery-2.jpg" alt="Axel during an olympiad event" />
+        </div>
+        <div class="gallery-item">
+          <img src="axel-gallery-3.jpg" alt="Axel solving problems in competition" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-note">
+      <span>
+        ICO 2026 official information: <a href="https://ico2026.au/" target="_blank" rel="noopener noreferrer">ico2026.au</a> [web:2]
+      </span>
+      <span>
+        Organised by the Venezuelans in Queensland Association · <a href="https://venezuelansinqueensland.org/" target="_blank" rel="noopener noreferrer">venezuelansinqueensland.org</a> [web:11]
+      </span>
+    </footer>
+  </div>
+</body>
+</html>
